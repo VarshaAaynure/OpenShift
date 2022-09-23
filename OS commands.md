@@ -1,6 +1,6 @@
 1. Get list of installed operators by passing namespace 
     $oc get clusterserviceversion -n $namespace
-    # or
+    #or
     $oc get csv -n $namespace
     e.g $oc get clusterserviceversion -n openshift-marketplace
     

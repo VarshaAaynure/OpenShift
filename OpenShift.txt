@@ -1,0 +1,33 @@
+Types of OpenShift
+
+OpenShift Origin > Open source application container platfor 
+OpenShift Online > Public Application Development hosting service 
+OpenShift Dedicated > Managed private cluster on AWS/Google Clouds
+Openshift Enterprise > On-Premise private PaaS
+
+User -UPI
+Libvirt Installer-Provisioned-Instrastructure (IPI).
+1.	Libvirt
+libvirt is an open-source API, daemon and management tool for managing platform virtualization. It can be used to manage KVM, Xen, VMware ESXi, QEMU and other virtualization technologies. These APIs are widely used in the orchestration layer of hypervisors in the development of a cloud-based solution.
+OpenShift Cluster
+An OpenShift Cluster is a group of nodes or machines running together. At the highest level of Kubernetes, there exist two kinds of servers, a Master and a Worker node. These servers can be Virtual Machines (VM) or physical servers (Bare metal).
+
+Namespace : 
+OS Management Tools :
+1.	Web console
+2.	CLI
+3.	REST API
+Container Orchestration : is the process of deploying and managing containers based on their requirements.
+Collection of one or more container is called Pod and multiple pods form deployments to other application.
+
+OC cmds :
+RTC -
+OpenShift Container Platform (OCP)
+custom resource definition (CRD)
+Custom Resources (CRs)
+Openshift Client (oc)  / OpenShift CLI (oc)
+PowerVs – PVS 
+POK machine – 
+piplelines
+OCP cluster
+what is cluster

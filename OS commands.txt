@@ -1,0 +1,82 @@
+1. Get list of installed operators by passing namespace 
+    $oc get clusterserviceversion -n $namespace
+    #or
+    $oc get csv -n $namespace
+    e.g $oc get clusterserviceversion -n openshift-marketplace
+    
+2. Get list catalog
+  $oc get catalogsource -n $namespace
+  e.g oc get catalogsource -n openshift-marketplace
+   
+3. To delete catalog
+  $oc delete catalogsource/$catalog-source-name -n $namespace
+  e.g $oc delete catalogsource/custom-operators -n openshift-marketplace
+
+4. To check the catalog pods 
+  oc get pods -n $namespace
+  oc get pods -n openshift-marketplace
+
+  
+oc get tektonconfig config -o yaml | less 
+oc version
+oc cluster-info
+oc get co 
+oc get nodes 
+oc get csr -A
+oc get subs -A
+oc delete sub openshift-pipelines-operator-rh -n openshift-operators
+oc get csv -A | grep openshift-pipelines-operator
+oc get csv -n openshift-operators
+
+virsh list
+virsh reset $node_name
+virsh resume $node_name
+
+# Get list of installed operators by passing namespace 
+oc get clusterserviceversion -n openshift-marketplace
+oc get clusterserviceversion -n openshift-marketplace | grep openshift-pipelines
+oc get clusterserviceversion -n openshift-operators
+
+oc get pods -n openshift-operators | grep openshift-pipelines-operator
+oc get pods -n openshift-pipelines | grep pipelines-as-code
+oc get pods -A | grep Error
+oc get pods -A | grep Pending
+oc get pods -A | grep ImagePullBackOff
+oc get pods -A | grep CrashLoopBackOff 
+oc get pods -A | grep NodeAffinity
+oc get pods -A | grep NotReady
+
+oc get tektoninstallerset
+oc get pods -n openshift-operators
+oc get pods -n openshift-pipelines
+
+oc get ip -A
+oc get subs -A
+oc get pvc -A
+oc delete ip $ip_name -n $namespace 
+
+
+oc projects
+oc get all -n $namespace
+
+oc delete ns `oc get ns | grep releasetest | awk '{print $1}'`
+oc delete ns `oc get ns | grep arendelle | awk '{print $1}'`
+oc delete ns `oc get ns | grep tutorial | awk '{print $1}'`
+oc delete ns `oc get ns | grep testcli | awk '{print $1}'`
+
+oc describe subscription -n openshift-operators
+oc describe installplan -n openshift-operators
+oc describe csv -n openshift-operators
+
+#Check if any node is in pending state
+#If yes then do ssh to that NotReady node ip
+oc get nodes -o wide
+ssh core@<ip>
+sudo -i
+systemctl status kubelet
+systemctl restart kubelet
+systemctl start kubelet
+systemctl status kubelet.service
+updateStrategy
+exit
+exit

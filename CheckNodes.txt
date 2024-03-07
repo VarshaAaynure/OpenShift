@@ -1,0 +1,9 @@
+if any node is in NotReady state then check
+oc get nodes
+oc get csr -A
+# if any in pending state 
+
+systemctl status kubelet
+
+every time check cluster co's are up 
+oc get csr -o name | xargs oc adm certificate approve

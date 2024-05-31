@@ -1,0 +1,2 @@
+# ocp upgrade command 4.15 to 4.16
+oc adm upgrade --allow-explicit-upgrade --to-image quay.io/openshift-release-dev/ocp-release@sha256:3b3cf74189a469b6033bf136a807c648e9268a7d9ededafd505914d2978cddcc
